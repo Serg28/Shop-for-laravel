@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateRolesTable extends Migration
 {
+
+    //protected $table = 'roles';
+
     /**
      * Run the migrations.
      *
@@ -15,7 +18,9 @@ class CreateRolesTable extends Migration
     {
         Schema::create('roles', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('name');
+            $table->string('alias')->unique();
+            $table->json('permissions');
         });
     }
 

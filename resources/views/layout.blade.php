@@ -29,8 +29,22 @@
                 </form>
 
                 <div class="text-end">
-                    <button type="button" class="btn btn-outline-light me-2">Login</button>
-                    <button type="button" class="btn btn-warning">Sign-up</button>
+                    @if (Route::has('login'))
+                        <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                            @auth
+                                <a href="{{ url('/home') }}" class="btn btn-outline-light me-2">Home</a>
+                            @else
+                                <a href="{{ route('login') }}" class="btn btn-outline-light me-2">Log in</a>
+
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}" class="btn btn-warning">Register</a>
+                                @endif
+                            @endauth
+                        </div>
+                    @endif
+
+
+
                 </div>
             </div>
         </div>

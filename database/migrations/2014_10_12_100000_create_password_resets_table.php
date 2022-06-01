@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePasswordResetsTable extends Migration
 {
+    //protected $table = 'password_resets';
+
     /**
      * Run the migrations.
      *

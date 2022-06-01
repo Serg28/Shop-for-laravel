@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateFailedJobsTable extends Migration
 {
+    //protected $table = 'failed_jobs';
+
     /**
      * Run the migrations.
      *

@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePersonalAccessTokensTable extends Migration
 {
+    //protected $table = 'personal_access_tokens';
+
     /**
      * Run the migrations.
      *
