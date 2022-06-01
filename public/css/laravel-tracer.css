@@ -1,0 +1,20 @@
+.laravel-trace {
+	display: block;
+	outline: 1px dotted #F4645F;
+}
+
+.laravel-trace.no-trace {
+	display: inline;
+	border: none;
+}
+
+.laravel-trace.no-trace .path {
+	display: none;
+}
+
+.laravel-trace .path {
+	background: #fff;
+	color: #000;
+	margin: 1;
+	font-size: 12px;
+}
