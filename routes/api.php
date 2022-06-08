@@ -21,3 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('products/{id}', function ($id) {
     return 'product: ' . $id;
 });
+
+Route::get('products', function () {
+    return response()->json(['Product 1', 'Product 2', 'Product 3'],200);
+});

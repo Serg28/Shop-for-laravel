@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MainController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,17 +13,17 @@ use App\Http\Controllers\MainController;
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('home');
-});*/
-
-Route::get('/', [MainController::class, 'home']);
-
-Route::get('/catalog', function () {
-    return view('catalog');
 });
 
-Route::get('/catalog/{category}', function ($category) {
-    //return view('catalog');
-    return $category;
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+
+//Admin panel
+
+Route::resource('product',ProductController::class);
